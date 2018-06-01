@@ -1,0 +1,22 @@
+<section fxLayout fxLayoutAlign="center center">
+  <mat-card fxFlex.xs="100%" fxFlex="400px">
+    <h2>Simple card</h2>
+    <mat-card-title>Do something to loose your weight fast?</mat-card-title>
+    <mat-card-content>
+      <span>What do you want to do in next week?</span>
+      <mat-form-field>
+          <mat-select #selectedExercise>
+            <mat-option *ngFor="let e of exercises$ | async" [value]="e.id">
+              {{ e.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="onNewProgram(selectedExercise)" mat-button>Add new Program</button>
+    </mat-card-actions>
+
+
+  </mat-card>
+</section>

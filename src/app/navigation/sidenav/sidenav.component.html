@@ -1,0 +1,6 @@
+<mat-nav-list>
+    <a mat-list-item *ngIf="!(isLoggined$ | async)" (click)="sidenav.toggle()" routerLink="login"><mat-icon>sentiment_satisfied_alt</mat-icon>Login</a>
+    <a mat-list-item *ngIf="!(isLoggined$ | async)" (click)="sidenav.toggle()" routerLink="signup"><mat-icon>person_add</mat-icon>Sign Up</a>
+    <a mat-list-item *ngIf="isLoggined$ | async" (click)="sidenav.toggle()" routerLink="training"><mat-icon>directions_bike</mat-icon>Training</a>
+    <a mat-list-item *ngIf="isLoggined$ | async" (click)="sidenav.toggle()" (click)="onSignOut()"><mat-icon>clear</mat-icon>Log Out</a>
+ </mat-nav-list>

@@ -1,0 +1,22 @@
+mat-sidenav-container,
+mat-sidenav,
+mat-sidenav-content {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}

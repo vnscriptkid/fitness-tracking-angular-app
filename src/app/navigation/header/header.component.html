@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+      <button (click)="sidenav.toggle()" mat-icon-button>
+        <mat-icon>dehaze</mat-icon>
+      </button>
+    </div>
+
+    <a routerLink="/"><mat-icon>home</mat-icon>My Application</a>
+
+    <div fxFlex fxLayout fxLayoutAlign="flex-end">
+      <ul fxLayout fxLayoutGap="10px" fxHide.xs>
+        <li *ngIf="!isLoggined$ | async"><a routerLink="login">Login</a></li>
+        <li *ngIf="!isLoggined$ | async"><a routerLink="signup">Sign Up</a></li>
+        <li *ngIf="isLoggined$ | async"><a routerLink="training">Training</a></li>
+        <li *ngIf="isLoggined$ | async"><a (click)="onSignOut()">Sign Out</a></li>
+      </ul>
+    </div>
+</mat-toolbar>
